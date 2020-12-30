@@ -43,5 +43,5 @@ public abstract class BaseView<S extends BaseState,M extends BaseModel> implemen
         M = m;
     }
     //创建state
-    abstract BaseState createState();
+    public abstract BaseState createState();
 }

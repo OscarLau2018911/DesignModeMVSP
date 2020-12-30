@@ -22,10 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6001b064-cb52-48df-b3f7-d6dba7f03b55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="6001b064-cb52-48df-b3f7-d6dba7f03b55" name="Default Changelist" comment="V P 双向状态影响">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/p/BasePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/p/BasePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/s/BaseState.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/s/BaseState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/v/BaseView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/v/BaseView.java" afterDir="false" />
     </list>
@@ -84,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609233595151</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="V P 双向状态影响">
+      <created>1609292024518</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609292024518</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,12 +106,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first version backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="first version backup" />
+    <MESSAGE value="V P 双向状态影响" />
+    <option name="LAST_COMMIT_MESSAGE" value="V P 双向状态影响" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1609233602136">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1609292028222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609233602136" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609292028222" />
   </component>
 </project>

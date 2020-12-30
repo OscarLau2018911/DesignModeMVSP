@@ -61,7 +61,7 @@ public abstract class BaseState<P extends BasePresenter,M extends BaseModel> {
         void onStateNotifyOnP(int state,BaseModel model);
     }
     //创建presenter
-    abstract BasePresenter createPresenter();
+    public abstract BasePresenter createPresenter();
 
     public notifyStateToV getV() {
         return V;
