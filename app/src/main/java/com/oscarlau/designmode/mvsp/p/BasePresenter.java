@@ -6,7 +6,7 @@ import com.oscarlau.designmode.mvsp.s.BaseState;
 /**
  * author:liudeyu on 2020/12/29
  */
-public abstract class BasePresenter<S extends BaseState,M extends BaseModel> {
+public abstract class BasePresenter<S extends BaseState,M extends BaseModel> implements BaseState.notifyStateToP{
     private BaseState S;
     private BaseModel M;
     //持有state实例
@@ -17,14 +17,14 @@ public abstract class BasePresenter<S extends BaseState,M extends BaseModel> {
     public void dettach(){
         setS(null);
     }
-    //告知state状态改变
+    //告知V state状态改变
     public void notifyStateToV(int state){
         notifyStateToV(state,null);
     }
-    //告知state状态改变
+    //告知V state状态改变
     public void notifyStateToV(int state,BaseModel model){
         if (getS() != null){
-            getS().setState(state,model);
+            getS().setStateToV(state,model);
         }
     }
 

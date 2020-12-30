@@ -17,7 +17,16 @@ public abstract class BaseView<S extends BaseState,M extends BaseModel> implemen
             getS().attach(this);
         }
     }
-
+    //告知P state状态改变
+    public void notifyStateToP(int state){
+        notifyStateToP(state,null);
+    }
+    //告知P state状态改变
+    public void notifyStateToP(int state,BaseModel model){
+        if (getS() != null){
+            getS().setStateToP(state,model);
+        }
+    }
     public BaseState getS() {
         return S;
     }
