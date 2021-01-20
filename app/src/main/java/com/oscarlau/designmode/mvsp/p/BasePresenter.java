@@ -7,10 +7,10 @@ import com.oscarlau.designmode.mvsp.s.BaseState;
  * author:liudeyu on 2020/12/29
  */
 public abstract class BasePresenter<S extends BaseState,M extends BaseModel> implements BaseState.notifyStateToP{
-    private BaseState S;
-    private BaseModel M;
+    private S S;
+    private M M;
     //持有state实例
-    public void attach(BaseState state){
+    public void attach(S state){
         setS(state);
     }
     //释放state实例
@@ -28,19 +28,19 @@ public abstract class BasePresenter<S extends BaseState,M extends BaseModel> imp
         }
     }
 
-    public BaseState getS() {
+    public S getS() {
         return S;
     }
 
-    public void setS(BaseState s) {
+    public void setS(S s) {
         S = s;
     }
 
-    public BaseModel getM() {
+    public M getM() {
         return M;
     }
 
-    public void setM(BaseModel m) {
+    public void setM(M m) {
         M = m;
     }
 }

@@ -8,8 +8,8 @@ import com.oscarlau.designmode.mvsp.s.BaseState;
  * author:liudeyu on 2020/12/29
  */
 public abstract class BaseView<S extends BaseState,M extends BaseModel> implements BaseState.notifyStateToV{
-    private BaseState S;
-    private BaseModel M;
+    private S S;
+    private M M;
 
     public BaseView(){
         setS(createState());
@@ -27,21 +27,22 @@ public abstract class BaseView<S extends BaseState,M extends BaseModel> implemen
             getS().setStateToP(state,model);
         }
     }
-    public BaseState getS() {
+    //创建state
+    public abstract S createState();
+
+    public S getS() {
         return S;
     }
 
-    public void setS(BaseState s) {
+    public void setS(S s) {
         S = s;
     }
 
-    public BaseModel getM() {
+    public M getM() {
         return M;
     }
 
-    public void setM(BaseModel m) {
+    public void setM(M m) {
         M = m;
     }
-    //创建state
-    public abstract BaseState createState();
 }

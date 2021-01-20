@@ -6,11 +6,10 @@ import com.oscarlau.designmode.mvsp.p.BasePresenter;
 /**
  * author:liudeyu on 2020/12/29
  */
-public abstract class BaseState<P extends BasePresenter,M extends BaseModel> {
-    private notifyStateToV V;
-    private int S;
-    private BaseModel M;
-    private BasePresenter P;
+public abstract class BaseState<P extends BasePresenter,M extends BaseModel>{
+    private BaseView V;
+    private int state;
+    private P P;
 
     public BaseState(){
         setP(createPresenter());
@@ -19,7 +18,7 @@ public abstract class BaseState<P extends BasePresenter,M extends BaseModel> {
         }
     }
     //持有view实例
-    public void attach(notifyStateToV view){
+    public void attach(BaseView view){
         setV(view);
     }
     //释放view实例
@@ -27,21 +26,29 @@ public abstract class BaseState<P extends BasePresenter,M extends BaseModel> {
         setV(null);
     }
     //presenter调用设置状态&数据接口
-    public void setStateToV(int state,BaseModel model){
-        setS(state);
-        setM(model);
-        if (getV() != null){
-            //此处如果存在观察者view，就回调给view处理
-            getV().onStateNotifyOnV(state,model);
+    public void setStateToV(int state,M model){
+        setState(state);
+        try {
+            if (getV() != null) {
+                //此处如果存在观察者view，就回调给view处理
+                getV().setM(model);
+                getV().onStateNotifyOnV(state, model);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
     //view调用设置状态&数据接口
-    public void setStateToP(int state,BaseModel model){
-        setS(state);
-        setM(model);
-        if (getP() != null){
-            //此处如果存在观察者view，就回调给view处理
-            getP().onStateNotifyOnP(state,model);
+    public void setStateToP(int state,M model){
+        setState(state);
+        try {
+            if (getP() != null) {
+                //此处如果存在观察者view，就回调给view处理
+                getP().setM(model);
+                getP().onStateNotifyOnP(state, model);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
     //presenter调用设置状态接口
@@ -53,45 +60,37 @@ public abstract class BaseState<P extends BasePresenter,M extends BaseModel> {
         setStateToP(state,null);
     }
     //观察state状态的继承接口--for view
-    public interface notifyStateToV{
-        void onStateNotifyOnV(int state,BaseModel model);
+    public interface notifyStateToV<M extends BaseModel>{
+        void onStateNotifyOnV(int state,M model);
     }
     //观察state状态的继承接口--for presenter
-    public interface notifyStateToP{
-        void onStateNotifyOnP(int state,BaseModel model);
+    public interface notifyStateToP<M extends BaseModel>{
+        void onStateNotifyOnP(int state,M model);
     }
     //创建presenter
-    public abstract BasePresenter createPresenter();
+    public abstract P createPresenter();
 
-    public notifyStateToV getV() {
+    public BaseView getV() {
         return V;
     }
 
-    public void setV(notifyStateToV v) {
+    public void setV(BaseView v) {
         V = v;
     }
 
-    public int getS() {
-        return S;
+    public int getState() {
+        return state;
     }
 
-    public void setS(int s) {
-        S = s;
+    public void setState(int s) {
+        state = s;
     }
 
-    public BaseModel getM() {
-        return M;
-    }
-
-    public void setM(BaseModel m) {
-        M = m;
-    }
-
-    public BasePresenter getP() {
+    public P getP() {
         return P;
     }
 
-    public void setP(BasePresenter p) {
+    public void setP(P p) {
         P = p;
     }
 }
