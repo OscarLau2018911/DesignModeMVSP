@@ -7,7 +7,7 @@ import com.oscarlau.designmode.mvsp.s.BaseState;
 /**
  * author:liudeyu on 2020/12/29
  */
-public abstract class BaseView<S extends BaseState,M extends BaseModel> implements BaseState.notifyStateToV{
+public abstract class BaseView<S extends BaseState,M extends BaseModel> implements IView<M>{
     private S S;
     private M M;
 

@@ -6,7 +6,7 @@ import com.oscarlau.designmode.mvsp.s.BaseState;
 /**
  * author:liudeyu on 2020/12/29
  */
-public abstract class BasePresenter<S extends BaseState,M extends BaseModel> implements BaseState.notifyStateToP{
+public abstract class BasePresenter<S extends BaseState,M extends BaseModel> implements implements IPresenter<M>{
     private S S;
     private M M;
     //持有state实例

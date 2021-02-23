@@ -23,6 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6001b064-cb52-48df-b3f7-d6dba7f03b55" name="Default Changelist" comment="fix bug">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/p/IPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/s/IState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/v/IView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/p/BasePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/p/BasePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/s/BaseState.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/s/BaseState.java" afterDir="false" />
@@ -56,12 +60,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/oscarlau/designmode/mvsp/v" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Sourcecode\DesignModeMVSP\app\src\main\java\com\oscarlau\designmode\mvsp\v" />
+      <recent name="D:\Sourcecode\DesignModeMVSP\app\src\main\java\com\oscarlau\designmode\mvsp\s" />
+      <recent name="D:\Sourcecode\DesignModeMVSP\app\src\main\java\com\oscarlau\designmode\mvsp\p" />
       <recent name="D:\Sourcecode\DesignModeMVSP2\app\src\main\java\com\oscarlau\designmode\mvsp" />
     </key>
   </component>
@@ -97,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609294413878</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="upgrade">
+      <created>1611127793422</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611127793422</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,12 +132,17 @@
     <MESSAGE value="first version backup" />
     <MESSAGE value="V P 双向状态影响" />
     <MESSAGE value="fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+    <MESSAGE value="upgrade" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1609294419716">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1614074768239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609294419716" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1614074768239" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1611127796759">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1611127796759" />
   </component>
 </project>
